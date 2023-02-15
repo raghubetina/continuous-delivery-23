@@ -1,0 +1,11 @@
+{
+  "name": "Continous Delivery",
+  "scripts": {
+    "postdeploy": "bundle exec rails db:seed dev:prime"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  }
+}
