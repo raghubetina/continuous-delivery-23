@@ -1,0 +1,19 @@
+image: jelaniwoods/appdev2023-vanilla-rails-6-fly
+
+tasks:
+  - before: |
+      source $(rvm 3.0.3 do rvm env --path)
+      bin/setup
+      .vscode/manage_extensions
+ports:
+  - port: 3000
+    onOpen: open-preview
+  - port: 5432
+    onOpen: ignore
+  - port: 9500-9999
+    onOpen: ignore
+
+vscode:
+  extensions:
+    - vortizhe.simple-ruby-erb
+    - aliariff.vscode-erb-beautify
